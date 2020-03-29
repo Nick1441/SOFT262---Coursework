@@ -1,0 +1,17 @@
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\SOFT262.deps.json
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\SOFT262.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\ref\SOFT262.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\SOFT262.pdb
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.csprojAssemblyReference.cache
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.AssemblyInfoInputs.cache
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.AssemblyInfo.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\ref\SOFT262.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.pdb
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\Cosmos.CRTCompat.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\Microsoft.Azure.Documents.ServiceInterop.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.csproj.CoreCompileInputs.cache
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\XamlC.stamp

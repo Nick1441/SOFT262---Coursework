@@ -15,4 +15,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="E:\Microsoft\Xamarin\NuGet\xamarin.forms\4.4.0.991265\build\Xamarin.Forms.props" Condition="Exists('E:\Microsoft\Xamarin\NuGet\xamarin.forms\4.4.0.991265\build\Xamarin.Forms.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Nick1\.nuget\packages\newtonsoft.json\10.0.2</PkgNewtonsoft_Json>
+  </PropertyGroup>
 </Project>

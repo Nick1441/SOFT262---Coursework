@@ -13,9 +13,13 @@ namespace SOFT262
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        CreatingData manager;
+
         public MainPage()
         {
             InitializeComponent();
+
+            manager = CreatingData.DefaultManager;
         }
     }
 }
