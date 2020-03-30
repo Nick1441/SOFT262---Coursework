@@ -27,5 +27,10 @@ namespace SOFT262
             //TRYING TO UPLOAD TO AZURE. IGNORE FOR NOW
             //manager = CreatingData.DefaultManager;
         }
+
+        private async void Button_Clicked(Object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page2());
+        }
     }
 }

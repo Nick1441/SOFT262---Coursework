@@ -7,19 +7,26 @@
              x:Class="SOFT262.MainPage">
 
     <StackLayout>
-        
+
+        <Button Text="CLICK ME" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"></Button>
         <!--Creating Main Page. Uses List View. Naming List for Use in .cs File.-->
         <ListView x:Name="MainPageList">
             <ListView.Header>
-                <Label Text="App Name" FontSize="40" TextColor="white" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="10" />
+                <Label Text="App Name" FontSize="40" TextColor="white" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="10"/>
             </ListView.Header>
 
-            <ListView.ItemTemplate>
-
-            </ListView.ItemTemplate>
+            
+            
+            <!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="80">
+                        <Label FontSize=" 50" TextColor="Black" BackgroundColor="Red" Text=" "></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>-->
 
             <ListView.Footer>
-
+                
             </ListView.Footer>
         </ListView>
     </StackLayout>
