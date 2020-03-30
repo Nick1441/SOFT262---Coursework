@@ -13,13 +13,19 @@ namespace SOFT262
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        CreatingData manager;
+        //CreatingData manager;
 
         public MainPage()
         {
             InitializeComponent();
+    
+            //Setting Test Text For Main App. Will Eventualy Be Subject Types For Flash Cards.
+            string Sentence = "This Is A Test. Hopefully This Works.";
+            //var src = Sentence.Split(" ").ToArray<string>;
+            MainPageList.ItemsSource = Sentence;
 
-            manager = CreatingData.DefaultManager;
+            //TRYING TO UPLOAD TO AZURE. IGNORE FOR NOW
+            //manager = CreatingData.DefaultManager;
         }
     }
 }

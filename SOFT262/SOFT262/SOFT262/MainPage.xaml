@@ -7,10 +7,21 @@
              x:Class="SOFT262.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        
+        <!--Creating Main Page. Uses List View. Naming List for Use in .cs File.-->
+        <ListView x:Name="MainPageList">
+            <ListView.Header>
+                <Label Text="App Name" FontSize="40" TextColor="white" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="10" />
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+
+            </ListView.ItemTemplate>
+
+            <ListView.Footer>
+
+            </ListView.Footer>
+        </ListView>
     </StackLayout>
 
 </ContentPage>
