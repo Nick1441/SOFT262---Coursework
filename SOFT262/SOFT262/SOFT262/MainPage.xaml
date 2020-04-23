@@ -26,7 +26,7 @@
             </ListView.ItemTemplate>-->
 
             <ListView.Footer>
-                
+                <Label Text="End Thing" FontSize="40" TextColor="white" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="10" FontAttributes="Italic"/>
             </ListView.Footer>
         </ListView>
     </StackLayout>
