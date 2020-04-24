@@ -8,14 +8,17 @@ namespace SOFT262
     class Cards
     {
         public string Subject { get; set; }
-        public string Question { get; set; }
-        public string Answer { get; set; }
+        public bool Card { get; set; } = false;
+        public string Question { get; set; } = "N/A";
+        public string Answer { get; set; } = "N/A";
 
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this);
         }
 
-        public Cards(string sub, string que, string ans) => (Subject, Question, Answer) = (sub, que, ans);
+        public Cards(string sub, bool car, string que, string ans) => (Subject, Card, Question, Answer) = (sub, car, que, ans);
+
+        public Cards(string sub) => (Subject) = (sub);
     }
 }
