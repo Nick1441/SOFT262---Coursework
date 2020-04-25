@@ -16,9 +16,8 @@ namespace SOFT262
         {
             return JsonConvert.SerializeObject(this);
         }
-
+        [JsonConstructor]
         public Cards(string sub, bool car, string que, string ans) => (Subject, Card, Question, Answer) = (sub, car, que, ans);
-
         public Cards(string sub) => (Subject) = (sub);
     }
 }

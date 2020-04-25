@@ -13,8 +13,15 @@ namespace SOFT262
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        //Finding The File Path Where Everything Will Be Saved.
+        //
+        //Create Checking Bool. This Will Check to See if the File Exists or If the File is Blank. If So Will Create Data.
+        //
+        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Data.json");
 
-        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.json");
+        List<Cards> Test = new List<Cards>();
+
+
         Button loadButton, saveButton;
 
         public MainPage()
@@ -22,15 +29,30 @@ namespace SOFT262
             InitializeComponent();
             //CreateJSON();
 
-            List<Cards> Test;
+            
 
 
             var input = new Entry { Text = "" };
             var output = new Label { Text = "" };
             saveButton = new Button { Text = "Save" };
 
+            //Checks To See If Initial File Exists.
+            FileFinder();
+            //Make It Save to JSON File.
 
-            Test = StartupQuestions();
+
+            //Load In Data From JSON File. Back Into List Array.
+            //Reset Array. Clear All Data (Incase Needed To Create File)
+
+            //Loading from JSON Array...
+            Test.Clear();
+            string text = File.ReadAllText(fileName);
+            Test = JsonConvert.DeserializeObject<List<Cards>>(text);
+
+            //Create Bindings To Allow Specific Parts to Be Shown in list View.
+            SubjectList.ItemsSource = Test;
+
+            //Test = StartupQuestions();
 
             saveButton.Clicked += (sender, e) =>
             {
@@ -74,23 +96,23 @@ namespace SOFT262
                 Children = { saveButton, loadButton }
             };
 
-            Content = new StackLayout
-            {
-                Margin = new Thickness(20),
-                Children =
-                {
-                    new Label
-                    {
-                        Text = "Save and Load Text",
-                        FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
-                        FontAttributes = FontAttributes.Bold
-                    },
-                    new Label { Text = "DOES THIS WORK?" },
-                    input,
-                    buttonLayout,
-                    output
-                }
-            };
+            //Content = new StackLayout
+            //{
+            //    Margin = new Thickness(20),
+            //    Children =
+            //    {
+            //        new Label
+            //        {
+            //            Text = "Save and Load Text",
+            //            FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
+            //            FontAttributes = FontAttributes.Bold
+            //        },
+            //        new Label { Text = "DOES THIS WORK?" },
+            //        input,
+            //        buttonLayout,
+            //        output
+            //    }
+            //};
 
 
 
@@ -100,9 +122,9 @@ namespace SOFT262
 
 
             //Setting Test Text For Main App. Will Eventualy Be Subject Types For Flash Cards.
-            string Sentence = "This Is A Test. Hopefully This Works.";
-            //var src = Sentence.Split(" ").ToArray<string>;
-            MainPageList.ItemsSource = Sentence;
+            //string Sentence = "This Is A Test. Hopefully This Works.";
+            ////var src = Sentence.Split(" ").ToArray<string>;
+            //SubjectList.ItemsSource = Sentence;
 
 
             //This is Testing Creating JSON File. This Will Be Ran Once For Creating. Normaly It will Load THe Built File.  NOT LOADING WHY!?
@@ -129,9 +151,23 @@ namespace SOFT262
 
             //Console.WriteLine("WORKED");
         }
+        
+        //This Method Checks To See if the File Is Created. Mainly For First Time Use as Will Only Create Once.
+        //Either Will Load File. Or Create New File With info Inside.
+        private void FileFinder()
+        {
+            if (File.Exists(fileName))
+            {
+                System.Diagnostics.Debug.WriteLine("File Found");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("No File");
+                Test = StartupQuestions();
+            }
+        }
 
-        //This Class Is For First Time Use. This Will Create The Basic Questions For The Database.
-        //This will Eventualy Be Checked So it is Only Ran Once? Somehow...
+        //This Method Is For First Time Use. This Will Create The Basic Questions For The Database.
         private List<Cards> StartupQuestions()
         {
             //Creating A List To Store All Cards.
@@ -154,6 +190,9 @@ namespace SOFT262
             CardList.Add(Car4);
             CardList.Add(Car5);
 
+            //Creates File.
+            var json = JsonConvert.SerializeObject(CardList);
+            File.WriteAllText(fileName, json);
 
             return CardList;
         }

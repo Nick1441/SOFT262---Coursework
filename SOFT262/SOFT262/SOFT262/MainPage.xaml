@@ -10,12 +10,13 @@
 
         <Button Text="CLICK ME" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"></Button>
         <!--Creating Main Page. Uses List View. Naming List for Use in .cs File.-->
-        <ListView x:Name="MainPageList">
+        <ListView x:Name="SubjectList">
             <ListView.Header>
                 <Label Text="App Name" FontSize="40" TextColor="white" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="10"/>
             </ListView.Header>
 
-            
+            <!--Create Reading Of File Here,
+            Add Settings for Deleting Etc Somewhere around here.-->
             
             <!--<ListView.ItemTemplate>
                 <DataTemplate>
