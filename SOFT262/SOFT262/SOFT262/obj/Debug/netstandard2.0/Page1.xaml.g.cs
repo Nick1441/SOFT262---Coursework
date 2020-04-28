@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SOFT262.Page2.xaml", "Page2.xaml", typeof(global::SOFT262.Page2))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SOFT262.Page1.xaml", "Page1.xaml", typeof(global::SOFT262.Page1))]
 
 namespace SOFT262 {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Page2.xaml")]
-    public partial class Page2 : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Page1.xaml")]
+    public partial class Page1 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Page2));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Page1));
         }
     }
 }

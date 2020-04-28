@@ -15,4 +15,6 @@ E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\bin\Debug\netstandard2.0\Microsoft.Azure.Documents.ServiceInterop.dll
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\SOFT262.csproj.CoreCompileInputs.cache
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\XamlC.stamp
-E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\Page2.xaml.g.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\Browse.xaml.g.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\Edit.xaml.g.cs
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262\obj\Debug\netstandard2.0\TabbedPage1.xaml.g.cs

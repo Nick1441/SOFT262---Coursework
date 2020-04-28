@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace SOFT262
 {
-    [DesignTimeVisible(false)]
+    //[DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
         //Finding The File Path Where Everything Will Be Saved.
@@ -24,8 +24,12 @@ namespace SOFT262
 
         Button loadButton, saveButton;
 
-        public MainPage()
+        public void MainPages()
         {
+            //
+            //Creating Tabs For Pages.
+            //
+
             InitializeComponent();
             //CreateJSON();
 
@@ -49,8 +53,22 @@ namespace SOFT262
             string text = File.ReadAllText(fileName);
             Test = JsonConvert.DeserializeObject<List<Cards>>(text);
 
+
+            //Finding The Key Cards
+
+            List<string> Subjects = new List<string>();
+
+            for (int i = 0; i < Test.Count; i++)
+            {
+                if (Test[i].Card == false)
+                {
+                    Subjects.Add(Test[i].Subject);
+                }
+            }
+
+            SubjectList.ItemsSource = Subjects;
             //Create Bindings To Allow Specific Parts to Be Shown in list View.
-            SubjectList.ItemsSource = Test;
+            //SubjectList.ItemsSource = Test;
 
             //Test = StartupQuestions();
 
@@ -132,10 +150,10 @@ namespace SOFT262
         }
 
         //This is called when Button is Clicked, Set by Even In XAML Class.
-        private async void Button_Clicked(Object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Page2());
-        }
+        //private async void Button_Clicked(Object sender, EventArgs e)
+        //{
+        //   // await Navigation.PushAsync(new Page2());
+        //}
 
         private void CreateJSON()
         {
@@ -182,6 +200,10 @@ namespace SOFT262
             Cards Car4 = new Cards("Art", true, "What Colour Is Red?", "Red");
             Cards Car5 = new Cards("Art", true, "How Many Paint Brushes Do We Have?", "0");
 
+            //Cards Car3 = new Cards("Art");
+            //Cards Car4 = new Cards("Art", true, "What Colour Is Red?", "Red");
+            //Cards Car5 = new Cards("Art", true, "How Many Paint Brushes Do We Have?", "0");
+
             CardList.Add(Car);
             CardList.Add(Car1);
             CardList.Add(Car2);
@@ -198,3 +220,16 @@ namespace SOFT262
         }
     }
 }
+
+//
+//      TO DO
+//
+//Create A Template for Items In List View.
+//Have Button On Each Items Will Will move onto a differnt Page Based Off That Subject.
+//
+//Create List veiws Etc in XAML based off CS File.
+//
+//Figure Out Top Thingy to Move around Edit And Deleting Stuff Which Could Be Good.
+//
+//
+//

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOFT262.Browse">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SubjectList" ItemsSource="{Binding Test3}">
+                <ListView.Header>
+                    <Label Text="Subjects" FontSize="40" />
+                </ListView.Header>
+
+                <!--<ListView.ItemTemplate>
+                    <DataTemplate>
+                        --><!--<StackLayout Orientation="Horizontal">--><!--
+                            <Label  Text="{Binding Subject}"></Label>
+                            --><!--<Label Text="Right"></Label>-->
+                        <!--</StackLayout>--><!--
+                    </DataTemplate>
+                </ListView.ItemTemplate>-->
+
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                        <TextCell>
+                            <TextCell.BindingContext>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Subject}" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                    <Label Text="Right Side?" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                                </StackLayout>
+                            </TextCell.BindingContext>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

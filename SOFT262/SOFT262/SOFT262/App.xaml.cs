@@ -15,6 +15,7 @@ namespace SOFT262
         {
             InitializeComponent();
 
+            MainPage = new TabbedPage1();
             ////Creating New List, This Will Store The Car1ds Inside if a Cards Array.
             //List<Cards> CardList = new List<Cards>();
 
@@ -35,7 +36,7 @@ namespace SOFT262
 
 
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
         }
 
         private void SaveData(List<Cards> cardList)
