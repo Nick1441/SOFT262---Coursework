@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace SOFT262
 {
-    class Cards
+    public class Cards
     {
         public string Subject { get; set; }
         public bool Card { get; set; } = false;

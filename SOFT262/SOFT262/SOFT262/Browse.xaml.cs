@@ -23,7 +23,7 @@ namespace SOFT262
         string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Data.json");
 
         //Creating List To Store All The Cards.
-        List<Cards> Test = new List<Cards>();
+        public List<Cards> Test = new List<Cards>();
 
         public Browse()
         {
@@ -39,16 +39,16 @@ namespace SOFT262
             Test = JsonConvert.DeserializeObject<List<Cards>>(text);
 
             //Adding Subjects To A Collection So Binding Can Work?
-            for (int i = 0; i < Test.Count; i++)
-            {
-                if (Test[i].Card == false)
-                {
-                    Test2.Add(Test[i]);
-                }
-            }
+            //for (int i = 0; i < Test.Count; i++)
+            //{
+            //    if (Test[i].Card == false)
+            //    {
+            //        Test2.Add(Test[i]);
+            //    }
+            //}
 
             //THIS CRASHES IT IDK WHY
-            SubjectList.ItemsSource = Test2;
+            //SubjectList.ItemsSource = Test;
 
 
             //Finds Subject Cards And Puts Them Into Seperate Array.
@@ -65,6 +65,10 @@ namespace SOFT262
             //SubjectList.ItemsSource = Subjects;
         }
 
+        public List<Cards> GetList()
+        {
+            return Test;
+        }
         private void FileFinder()
         {
             if (File.Exists(fileName))

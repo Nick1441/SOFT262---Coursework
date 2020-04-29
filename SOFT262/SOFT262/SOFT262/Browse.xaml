@@ -7,21 +7,30 @@
              x:Class="SOFT262.Browse">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="SubjectList" ItemsSource="{Binding Test3}">
+            <ListView x:Name="SubjectList" ItemsSource="{Binding Test}">
                 <ListView.Header>
                     <Label Text="Subjects" FontSize="40" />
                 </ListView.Header>
 
-                <!--<ListView.ItemTemplate>
-                    <DataTemplate>
-                        --><!--<StackLayout Orientation="Horizontal">--><!--
-                            <Label  Text="{Binding Subject}"></Label>
-                            --><!--<Label Text="Right"></Label>-->
-                        <!--</StackLayout>--><!--
-                    </DataTemplate>
-                </ListView.ItemTemplate>-->
-
                 <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text ="{Binding Subject}"></Label>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+
+                <!--<ListView.Resources>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Subject}" Value="true">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+                </ListView.Resources>-->
+                
+                <!--<ListView.ItemTemplate>
                 <DataTemplate>
                         <TextCell>
                             <TextCell.BindingContext>
@@ -32,7 +41,7 @@
                             </TextCell.BindingContext>
                         </TextCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
+                </ListView.ItemTemplate>-->
 
             </ListView>
         </StackLayout>
