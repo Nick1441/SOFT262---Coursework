@@ -133,4 +133,13 @@
       <Name>SOFT262</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Manage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Revise.png" />
+  </ItemGroup>
 </Project>

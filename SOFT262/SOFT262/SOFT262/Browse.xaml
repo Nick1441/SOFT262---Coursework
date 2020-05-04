@@ -4,46 +4,120 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SOFT262.Browse">
+             x:Class="SOFT262.Browse"
+             BackgroundColor="#2c2c2c">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="SubjectList" ItemsSource="{Binding Test}">
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Revision Cards App" FontSize="45"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                   Margin="10" 
+                   TextColor="White"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <Picker x:Name="SubjectPick" Title="Select A Subject" ItemsSource="{Binding SubjectString}"
+                    SelectedItem="{Binding SubjectString}"
+                    TextColor="White" 
+                    VerticalOptions="StartAndExpand"
+                    Margin="10" SelectedIndexChanged="SubjectChange"
+                    TitleColor="White"
+                    BackgroundColor="#1b1b1b"
+                    />
+
+            <Button x:Name="btnReveal" Clicked="btnRevealClick" Text=""
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="250"
+                    Margin="10"
+                    TextColor="#1b1b1b"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    />
+            
+
+            <Grid RowSpacing="0" Padding="10" VerticalOptions="StartAndExpand">
+                <Grid.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Button">
+                            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                            <Setter Property="BackgroundColor" Value="#1b1b1b"/>
+                            <Setter Property="TextColor" Value="White"/>
+                        </Style>
+                    </ResourceDictionary>
+                </Grid.Resources>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnNext" Clicked="btnNextClick" Text="Next" Grid.Row="0" Grid.Column="2"/>
+                <Button x:Name="btnPrev" Clicked="btnPrevClick" Text="Previous" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnRandom" Clicked="btnRandomClick" Text="Random" Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+
+            <!--<ListView x:Name="SubjectList" ItemsSource="{Binding SubjectString}" HasUnevenRows="True">
                 <ListView.Header>
                     <Label Text="Subjects" FontSize="40" />
                 </ListView.Header>
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text ="{Binding Subject}"></Label>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid RowSpacing="0" Padding="10">
+
+                                    <Grid.Resources>
+                                        <ResourceDictionary>
+                                            
+                                            --><!--Setting Properties for Buttons And Labels Used--><!--
+                                            <Style TargetType="Label">
+                                                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                                                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                                                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                                            </Style>
+
+                                            <Style TargetType="Button">
+                                                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                                                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                                            </Style>
+
+                                        </ResourceDictionary>
+                                    </Grid.Resources>
+                                    
+                                    --><!--Setting Distance For Grids Rows/Collums--><!--
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="TestLab"  Grid.Row="0" Grid.Column="0" Text ="{Binding Subject}"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Text="Edit" Clicked="ClickMe"/>
+                                    <Button Grid.Row="0" Grid.Column="2" Text="Try!"/>
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
 
-
-                <!--<ListView.Resources>
-                <Style TargetType="{x:Type ListViewItem}">
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Subject}" Value="true">
-                            <Setter Property="Visibility" Value="Collapsed"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-                </ListView.Resources>-->
-                
-                <!--<ListView.ItemTemplate>
-                <DataTemplate>
-                        <TextCell>
-                            <TextCell.BindingContext>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Subject}" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
-                                    <Label Text="Right Side?" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
-                                </StackLayout>
-                            </TextCell.BindingContext>
-                        </TextCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>-->
-
-            </ListView>
+                <ListView.Footer>
+                    <Label x:Name="Test56" Text="Add New Subject?"/>
+                </ListView.Footer>
+            </ListView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

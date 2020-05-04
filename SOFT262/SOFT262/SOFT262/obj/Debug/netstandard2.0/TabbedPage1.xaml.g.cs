@@ -17,8 +17,12 @@ namespace SOFT262 {
     public partial class TabbedPage1 : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.TabbedPage TabPageList;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TabbedPage1));
+            TabPageList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.TabbedPage>(this, "TabPageList");
         }
     }
 }

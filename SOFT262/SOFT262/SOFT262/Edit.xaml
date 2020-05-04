@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SOFT262.Edit"
-             BackgroundColor="#1b1b1b">
+             BackgroundColor="#2c2c2c">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#1b1b1b" VerticalOptions="Start">
             <Label Text="Select Subject To Edit."
@@ -15,11 +15,13 @@
                 FontSize="30"
                 FontFamily="Bold"
                 Padding="10"/>
+            
+            
             <Picker x:Name="SubjectPicker" Title="Select A Subject" ItemsSource="{Binding Test}" ItemDisplayBinding="{Binding Subject}" 
                     SelectedItem="{Binding Test.Subject}" TextColor="#cdcac7"
                     BackgroundColor="#2c2c2c"
                     TitleColor="#cdcac7" VerticalOptions="StartAndExpand"
-                    Margin="10"
+                    Margin="10" 
                     ></Picker>
 
             <Label Text="Question" Margin="5" TextColor="#cdcac7"></Label>

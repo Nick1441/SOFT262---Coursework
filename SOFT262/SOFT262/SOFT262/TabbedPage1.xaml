@@ -4,13 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:SOFT262"
             mc:Ignorable="d"
-             x:Class="SOFT262.TabbedPage1">
+             x:Class="SOFT262.TabbedPage1"
+            x:Name="TabPageList"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarSelectedItemColor="White"
+            BackgroundColor="#1b1b1b"
+            BarTextColor="White"
+            >
   <!--Pages can be added as references or inline-->
   <!--<ContentPage Title="Browse Subjects" />
    <ContentPage Title="Edit Cards" />-->
 
     <TabbedPage.Children>
-        <local:Browse Title="Browse"/>
-        <local:Edit Title="Edit Cards"/>
+        <local:Browse Title="Browse" IconImageSource="Revise.png"/>
+        <local:Edit Title="Create" IconImageSource="Edit.png"/>
+        <local:Manage Title="Manage" IconImageSource="Manage.png"/>
     </TabbedPage.Children>
 </TabbedPage>
