@@ -40,8 +40,6 @@ E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Andr
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\com.companyname.soft262.aab
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\com.companyname.soft262-Signed.aab
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\com.companyname.soft262-Signed.apk
-E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\SOFT262.dll
-E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\SOFT262.pdb
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\XamlC.stamp
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\SOFT262.Android.csproj.CopyComplete
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\SOFT262.Android.dll
@@ -99,8 +97,6 @@ E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Andr
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\SOFT262.Android.dll
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\SOFT262.Android.pdb
-E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\SOFT262.dll
-E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\SOFT262.pdb
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\System.Buffers.dll
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\System.Collections.Concurrent.dll
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\System.Collections.dll
@@ -555,3 +551,8 @@ E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Andr
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\res\drawable\edit.png
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\res\drawable\manage.png
 E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\res\drawable\revise.png
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\Revision App.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\bin\Debug\Revision App.pdb
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\Revision App.dll
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\android\assets\Revision App.pdb
+E:\Users\Nick\Documents\GitHub\SOFT262---Coursework\SOFT262\SOFT262\SOFT262.Android\obj\Debug\90\res\drawable\revise1.ico

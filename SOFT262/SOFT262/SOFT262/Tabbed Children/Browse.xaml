@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOFT262.Browse"
+             BackgroundColor="#2c2c2c">
+    
+    <ContentPage.Content>
+        <!--Stack Layout To Set Everything going Down The Page.-->
+        <StackLayout VerticalOptions="StartAndExpand">
+            
+            <!--Title Label-->
+            <Label Text="Revision Cards App" FontSize="45"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                   Margin="10" 
+                   TextColor="White"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <!--Picker For Subjects, Binds To Obeservable Collection-->
+            <Picker x:Name="SubjectPick" Title="Select A Subject" ItemsSource="{Binding SubjectString}"
+                    SelectedItem="{Binding SubjectString}"
+                    TextColor="White" 
+                    VerticalOptions="StartAndExpand"
+                    Margin="10" SelectedIndexChanged="SubjectChange"
+                    TitleColor="White"
+                    BackgroundColor="#1b1b1b"
+                    />
+
+            <!--This is a Giant Button, Used For Showing Text-->
+            <Button x:Name="btnReveal" Clicked="btnRevealClick" Text=""
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="250"
+                    Margin="10"
+                    TextColor="#1b1b1b"
+                    FontSize="25"
+                    BackgroundColor="White"
+                    />
+
+
+            <Grid RowSpacing="10" Padding="10" VerticalOptions="StartAndExpand">
+                
+                <!--Defining Properties to Prevent Repeating Code.-->
+                <Grid.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Button">
+                            <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                            <Setter Property="BackgroundColor" Value="#1b1b1b"/>
+                            <Setter Property="TextColor" Value="White"/>
+                        </Style>
+                    </ResourceDictionary>
+                </Grid.Resources>
+
+                <!--Setting Row and Column height-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    
+                <!--Creating Buttons Inside Of Grid, Properties set In Grid.Resources.-->
+                <Button x:Name="btnNext" Clicked="btnNextClick" Text="Next" Grid.Row="0" Grid.Column="2"/>
+                <Button x:Name="btnPrev" Clicked="btnPrevClick" Text="Previous" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnRandom" Clicked="btnRandomClick" Text="Random" Grid.Row="0" Grid.Column="1"/>
+                <Button x:Name="btnRefresh" Clicked="btnRefreshClick" Text="Refresh" BackgroundColor="OrangeRed" Grid.Row="1" Grid.Column="1"/>
+                
+                <!--USED FOR RESETING INFO BACK TO NORMLAL. CHECK CS FILE FOR MORE DETIAL-->
+                <!--<Button x:Name="btnReset" Clicked="btnReset_Clicked" BackgroundColor="Yellow" Grid.Row="1" Grid.Column="2" Text="Reset" TextColor="Black"/>-->
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

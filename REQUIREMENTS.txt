@@ -1,0 +1,8 @@
+Requirements
+
+User Interface and Navigation  - 1st
+
+C.R.U.D. and persistence       - 2:1 - Cannot Be First As Azure Was Not Working. 
+                                       Meaning Local Only. 1st If Cloud Does Not Count.
+
+Software Architecture          - 2:1

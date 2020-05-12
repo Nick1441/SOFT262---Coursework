@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOFT262.Edit"
+             BackgroundColor="#2c2c2c">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            
+            <!--Creating Properties Labels can use, Prevents Duplicating Code.-->
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                        <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                        <Setter Property="Margin" Value="12, 0, 10, 0"/>
+                        <Setter Property="TextColor" Value="White"/>
+                    </Style>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+            
+            <!--Create Card Section. Uses Grid to Place Refresh Button At the Top Also.--> 
+            <Grid Margin="0, 10, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Text="Create Card" FontSize="35"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                   Margin="5" TextColor="White"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <Button x:Name="btnRefresh" Clicked="btnRefreshClick" Text="Refresh" BackgroundColor="OrangeRed" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3"/>
+            </Grid>
+
+            <!--Setting Picker. Uses Observable Collection as Item Source. Doesnt Require Binding as Displaying Everything.-->
+            <Label Text="Select Subject"/>
+            
+            <Picker Title="Subject" FontSize="20" x:Name="SubjectPicker"
+                    VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="10, 0, 10, 0" TitleColor="Gray" TextColor="Gray"/>
+
+            <!--Creating Editors. These Text Fields Are Used throughout so are named.-->
+            <Label Text="Enter Question" Margin="12, 10, 10, 0"/>
+
+            <Editor Text="" x:Name="EditorQuestion" FontSize="20"
+                    VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="10, 0, 10, 0" TextColor="Gray" BackgroundColor="#1b1b1b"/>
+
+            <Label  Text="Enter Answer" Margin="12, 10, 10, 0"/>
+            
+            <Editor Text="" x:Name="EditorAnswer" FontSize="20"
+                    VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="10, 0, 10, 0" TextColor="Gray" BackgroundColor="#1b1b1b"/>
+
+            <Button Text="Create Card" Clicked="btnCreateCard"
+                    TextColor="White" BackgroundColor="#1b1b1b"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center"/>
+
+            <!--Create Subject Section-->
+            <Label Text="Create Subject" FontSize="35"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                   Margin="0, 5, 0, 0" TextColor="White"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label  Text="Enter New Subject" Margin="12, 5, 5, 0"/>
+
+            <Editor Text="" x:Name="EditorNewSub" FontSize="20"
+                    VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="10, 0, 15, 0" TextColor="Gray" BackgroundColor="#1b1b1b"/>
+
+            <Button Text="Create Subject" Clicked="btnCreateSubject" 
+                    TextColor="White" BackgroundColor="#1b1b1b"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

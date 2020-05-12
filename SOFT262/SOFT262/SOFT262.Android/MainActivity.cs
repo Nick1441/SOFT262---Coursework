@@ -9,7 +9,8 @@ using Android.OS;
 
 namespace SOFT262.Droid
 {
-    [Activity(Label = "SOFT262", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    //Changing The Name and Icon When App Is Being Built
+    [Activity(Label = "Revision App", Icon = "@drawable/Revise1", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SOFT262.Manage"
+             BackgroundColor="#2c2c2c">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <!--Uses Grid To Layout Refresh Button next To Title.-->
+            <Grid Margin="0, 10, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Text="Edit Cards" FontSize="30"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                   Margin="0, 10, 0, 0" TextColor="White"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <Button x:Name="btnRefresh" Clicked="btnRefreshClick" Text="Refresh" 
+                        BackgroundColor="OrangeRed" VerticalOptions="FillAndExpand" HorizontalOptions="Center"
+                        Grid.Row="0" Grid.Column="3"/>
+            </Grid>
+            
+            <Label Text="Select Card To Edit" TextColor="White" FontSize="15"
+                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+            <!--Used For Splitting The Page In Half-->
+            <Grid Margin="10">
+                
+                <!--First Half Of The Page-->
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <ListView x:Name="EditCardList" ItemsSource="{Binding SubList}" 
+                              VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+                              RowHeight="90" BackgroundColor="White" ItemSelected="EditCardList_ItemSelected"
+                              IsPullToRefreshEnabled="False">
+
+                        <ListView.Header />
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!--Uses Target Type to Prevent Repeating Code.-->
+                                        <Grid.Resources>
+                                            <ResourceDictionary>
+                                                <Style TargetType="Label" x:Key="Info">
+                                                    <Setter Property="TextColor" Value="DarkSlateGray"/>
+                                                    <Setter Property="FontSize" Value="15"/>
+                                                    <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                                                    <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                                                </Style>
+                                            </ResourceDictionary>
+                                        </Grid.Resources>
+
+                                        <!--Creates Labels Using Binding From Item Source, Uses Custom Formatiing for Differnt Looks.-->
+                                        
+                                        <Label Text="{Binding Subject, StringFormat='Subject - {0}'}" Grid.Row="0" Grid.Column="0" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                                        
+                                        <Label Text="{Binding Question, StringFormat='Question - {0}'}" Grid.Row="1" Grid.Column="0"/>
+                                        
+                                        <Label Text="{Binding Answer, StringFormat='Answer - {0}'}" Grid.Row="2" Grid.Column="0"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate> 
+                        </ListView.ItemTemplate>
+                
+                    </ListView>
+                
+                </StackLayout>
+
+                <!--Second Half Of The Page.-->
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <StackLayout.Resources>
+                        <ResourceDictionary>
+                            
+                            <!--Uses Target Types For Buttons and Editors To Prevent Code Duping.-->
+                            <Style TargetType="Button">
+                                <Setter Property="TextColor" Value="White"/>
+                                <Setter Property="BackgroundColor" Value="#1b1b1b"/>
+                                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                                <Setter Property="HorizontalOptions" Value="Center"/>
+                            </Style>
+
+                            <Style TargetType="Editor">
+                                <Setter Property="FontSize" Value="20"/>
+                                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                                <Setter Property="TextColor" Value="Gray"/>
+                                <Setter Property="BackgroundColor" Value="#1b1b1b"/>
+                            </Style>
+                        </ResourceDictionary>
+                    </StackLayout.Resources>
+                    
+                    <!--Editors Can Seem Basic And easy to see as properties set before.-->
+                    <Editor x:Name="EditSubject" Text="Subject"/>
+                    <Editor x:Name="EditQuestion" Text="Question"/>
+                    <Editor x:Name="EditAnswer" Text="Answer"/>
+
+                    <!--Sub Stack Layout for Buttons At Bottom of Screen. Stack Layout Orientation is Horizontal.-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Text="Save" Clicked="btnSave"/>
+                        <Button Text="Delete Card" Clicked="btnDelete"/>
+                        <Button Text="Delete Subject" Clicked="btnDeleteSub"/>
+                    </StackLayout>
+                </StackLayout>
+                
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

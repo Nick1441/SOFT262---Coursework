@@ -1352,7 +1352,7 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "SOFT262/1.0.0": {
+      "Revision App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1362,10 +1362,10 @@
           "Xamarin.Forms": "4.4.0.991265"
         },
         "compile": {
-          "bin/placeholder/SOFT262.dll": {}
+          "bin/placeholder/Revision App.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SOFT262.dll": {}
+          "bin/placeholder/Revision App.dll": {}
         }
       }
     }
@@ -3786,7 +3786,7 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "SOFT262/1.0.0": {
+    "Revision App/1.0.0": {
       "type": "project",
       "path": "../SOFT262/SOFT262.csproj",
       "msbuildProject": "../SOFT262/SOFT262.csproj"
@@ -3797,7 +3797,7 @@
       "Microsoft.Azure.Cosmos >= 3.7.0",
       "Microsoft.Extensions.Configuration.UserSecrets >= 3.1.3",
       "Newtonsoft.Json >= 12.0.3",
-      "SOFT262 >= 1.0.0",
+      "Revision App >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.4.0.991265"
     ]

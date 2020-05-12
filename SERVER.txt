@@ -1,0 +1,2 @@
+No Server Was Used Due To Azure Connection To Data Base Issues.
+Local Storage Only Used.
